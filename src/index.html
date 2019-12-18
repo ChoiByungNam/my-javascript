@@ -2,20 +2,22 @@
 <html lang="ko-KR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tetris</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+  @@include('pages/_template/head.html')
+  <title>Javascript</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
 </head>
 
 <body>
-  <canvas id="canvas" width="600" height="600"></canvas>
+  <div id="wrapper">
+    @@include('components/header/index.html', {"id": "header", "class": "header--index"})
 
-  <script src="/assets/js/common.js"></script>
+    <div class="content">
+      <p>content</p>
+    </div>
+
+    @@include('components/footer/index.html', {"id": "footer", "class": "footer--index"})
+  </div>
+
+  @@include('pages/_template/script.html')
 </body>
 </html>
