@@ -1,0 +1,7 @@
+src/polyfills/**/*
+src/**/*.hbs
+src/components/sprites/*.less
+src/assets/js/vendor/**/*
+**/*.md
+package.json
+node_modules/
