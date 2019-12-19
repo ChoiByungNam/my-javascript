@@ -10,7 +10,7 @@ module.exports = ({ gulp } = {}) => {
       ],
       gulp.series(['img'])
     );
-    // gulp.watch('src/assets/js/vendor/**/*', gulp.series(['js']));
+    gulp.watch('src/assets/js/vendor/**/*', gulp.series(['js']));
     gulp.watch('src/assets/js/vendor/**/*', gulp.series(['js:vendor']));
   };
 };

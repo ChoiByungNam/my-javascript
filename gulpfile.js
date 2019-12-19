@@ -34,6 +34,7 @@ gulp.task('css:app', styles.app);
 gulp.task('css', gulp.parallel('css:app'));
 gulp.task('sprites', gulp.parallel(sprites));
 gulp.task('sprite+css', gulp.series('sprites', 'css'));
+gulp.task('js', scripts)
 gulp.task('js:vendor', assets.vendors);
 
 const buildTasks = ['assets', 'img', 'sprite+css', 'html'];

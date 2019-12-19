@@ -4,18 +4,49 @@
 <head>
   @@include('pages/_template/head.html')
   <title>Javascript</title>
-  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
-  <div id="wrapper">
-    @@include('components/header/index.html', {"id": "header", "class": "header--index"})
+  <div class="wrapper">
+    @@include('components/header/index.html', {"id": "header", "class": "header--main"})
 
-    <div class="content">
-      <p>content</p>
-    </div>
+    <hr>
 
-    @@include('components/footer/index.html', {"id": "footer", "class": "footer--index"})
+    <!--
+      1. 스크롤 이동 시 header 영역에 is-fixed 클래스 추가
+      2. nav 메뉴 클릭 시 해당 컨텐츠로 이동
+      3. 컨텐츠 영역별 스크롤 근접 시 해당 컨텐츠 영역으로 스크롤 이동
+      4. 라이브러리 적용
+      5. vue 작업해 보기
+    -->
+
+    <main class="content">
+      <div class="section" style="height: 100vh;background-color: red;">
+        SECTION 1
+      </div>
+
+      <div class="section" style="height: 100vh;background-color: orange;">
+        SECTION 2
+      </div>
+
+      <div class="section" style="height: 100vh;background-color: yellow;">
+        SECTION 3
+      </div>
+
+      <div class="section" style="height: 100vh;background-color: green;">
+        SECTION 4
+      </div>
+
+      <div class="section" style="height: 100vh;background-color: blue;">
+        SECTION 5
+      </div>
+    </main>
+
+    <hr>
+
+    @@include('components/footer/index.html', {"id": "footer", "class": "footer--main"})
   </div>
 
   @@include('pages/_template/script.html')

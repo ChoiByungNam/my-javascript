@@ -1,8 +1,25 @@
 // Self Clear
 .self-clear() {
+  &:before,
   &:after {
-    content: '';
     display: table;
+    content: '';
+  }
+
+  &:after {
     clear: both;
   }
+}
+
+.for-a11y() {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 1px;
+  line-height: 1px;
+  color: transparent;
+  user-select: none;
 }
